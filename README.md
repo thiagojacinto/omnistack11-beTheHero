@@ -6,6 +6,7 @@ This is also part of the Omnistack 11.0, and it got there a basic structure that
 
 ## Structure
 
+```
 |beTheHero
 |-- backend
     |-- index.js
@@ -15,4 +16,3 @@ This is also part of the Omnistack 11.0, and it got there a basic structure that
     |-- package.json (cra, ...)
 |-- [ ] mobile ? >_future..._
 |__ README.md (_this!_)
-

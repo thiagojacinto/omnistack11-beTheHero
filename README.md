@@ -9,11 +9,11 @@ This is also part of the Omnistack 11.0, and it got there a basic structure that
 ```shell
 |beTheHero
 ├── backend
-    ├── index.js
-    ├── package.json (express, ...)
+│   ├── index.js
+│   ├── package.json (express, ...)
 ├── web
-    ├── src/app.js
-    ├── package.json (cra, ...)
+│   ├── src/app.js
+│   ├── package.json (cra, ...)
 ├── mobile ? (future...)
 ├── README.md (this!)
 └── LICENSE: MIT

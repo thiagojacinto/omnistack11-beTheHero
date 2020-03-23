@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend of beTheHero application: project of Omnistack-11",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thiagojacinto/omnistack11-beTheHero/backend"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "omnistack-11"
+  ],
+  "author": "Thiago Jacinto",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

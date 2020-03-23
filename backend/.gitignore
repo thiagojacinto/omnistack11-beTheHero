@@ -1,0 +1,6 @@
+## NodeJS files & folders to ignore on GIT:
+node_modules
+build
+npm-debug.log
+.env
+.DS_Store

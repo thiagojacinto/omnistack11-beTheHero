@@ -6,13 +6,15 @@ This is also part of the Omnistack 11.0, and it got there a basic structure that
 
 ## Structure
 
-```
+```shell
 |beTheHero
-|-- backend
-    |-- index.js
-    |-- package.json (express, ...)
-|-- web
-    |-- src/app.js
-    |-- package.json (cra, ...)
-|-- [ ] mobile ? >_future..._
-|__ README.md (_this!_)
+├── backend
+    ├── index.js
+    ├── package.json (express, ...)
+├── web
+    ├── src/app.js
+    ├── package.json (cra, ...)
+├── mobile ? (future...)
+├── README.md (this!)
+└── LICENSE: MIT
+```

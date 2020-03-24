@@ -8,12 +8,12 @@ const NGOController = require('./controllers/NgoController');
 /**
  * CREATE A NEW NGO: POST() method
  */
-routes.post('/ngos', async (request, response) => NGOController.create);
+routes.post('/ngos', NGOController.create);
 
 /**
  * LIST NGOs INSERTED: GET() method
  */ 
-routes.get('/ngos/:limit', async(request, response) => NGOController.listAll);
+routes.get('/ngos/:limit', NGOController.listAll);
 
 
 // at the end, exports the routes:

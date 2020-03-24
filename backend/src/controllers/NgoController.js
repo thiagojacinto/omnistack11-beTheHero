@@ -26,7 +26,7 @@ module.exports = {
 
   // list all inserted NGOs
 
-  async listAll(request, response) {
+  async index(request, response) {
     // limit of the search:
     const { limit } = request.params;
     console.log(`Search limit: ${limit}`);

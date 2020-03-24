@@ -3,7 +3,7 @@
 // auto-created after `npx knex init` command
 
 module.exports = {
-
+  // this work will be done in this workspace
   development: {
     client: 'sqlite3',
     connection: {
@@ -14,6 +14,10 @@ module.exports = {
     },
     useNullAsDefault: true,
   },
+
+  /**
+   * IGNORE FROM HERE TO BOTTOM
+   */
 
   staging: {
     client: 'postgresql',

@@ -4,7 +4,8 @@
   "description": "Backend of beTheHero application: project of Omnistack-11",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,11 @@
   "author": "Thiago Jacinto",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.20.13",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }

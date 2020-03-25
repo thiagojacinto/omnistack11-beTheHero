@@ -13,14 +13,14 @@ export default function Logon() {
         <img src={logo} alt="Be The Hero"/>
 
         <form action="">
-          <h1>Entrar</h1>
+          <h1>Welcome</h1>
 
-          <input placeholder="Digite a sua ID." />
-          <button className="button" type="submit">Entrar</button>
+          <input placeholder="Type desired NGO`s ID." />
+          <button className="button" type="submit">Enter</button>
 
           <a href="/register">
             <FiLogIn size={20} color="#E02041" />
-            Ou cadastre-se aqui
+            Or register here.
           </a>
         </form>
       </section>

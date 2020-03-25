@@ -20,15 +20,24 @@ module.exports = {
 
     console.log(`Page number: ${page}; and it has to show ${limit} n. of incidents.`);
 
-    const [count] = connection('incidents').count();
-    response.header('X-Total-Count', count['count(*)']);
+    const [count] = await connection('incidents').count();
     
     // searchs everything (start) limiting results (limit(x))
     const allIncidents = await connection('incidents')
-      .limite(limit)
-      .offset((page - 1)*limit)
-      .select('*')
-      
+    .join('ngos', 'ngos.id', '=', 'incidents.ngo_id')
+    .limit(limit)
+    .offset((page - 1)*limit)
+    .select([
+      'incidents.*',
+      'ngos.name',
+      'ngos.email',
+      'ngos.phone',
+      'ngos.city',
+      'ngos.state'
+    ]);
+
+    // put count inside response header:
+    response.header('X-Total-Count', count['count(*)']);
     // returns that json object:
     return response.json(allIncidents);
   },

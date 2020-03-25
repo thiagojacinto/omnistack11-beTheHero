@@ -1,7 +1,11 @@
 // imports express lib:
 const express = require('express');
+// import cors
+const cors = require('cors');
 // than, initiate it:
 const app = express();
+// permit all application to access this backend API:
+app.use(cors());
 
 // imports the routes separated file:
 const routes = require('./routes');

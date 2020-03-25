@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiLogIn } from 'react-icons/fi'
+import { Link } from 'react-router-dom';
 
 import './login.css';
 import heroesImg from '../../assets/heroes.png';
@@ -18,10 +19,10 @@ export default function Logon() {
           <input placeholder="Type desired NGO`s ID." />
           <button className="button" type="submit">Enter</button>
 
-          <a href="/register">
+          <Link to="/register">
             <FiLogIn size={20} color="#E02041" />
             Or register here.
-          </a>
+          </Link>
         </form>
       </section>
 

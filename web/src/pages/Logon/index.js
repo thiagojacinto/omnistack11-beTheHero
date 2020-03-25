@@ -19,7 +19,7 @@ export default function Logon() {
           <input placeholder="Type desired NGO`s ID." />
           <button className="button" type="submit">Enter</button>
 
-          <Link to="/register">
+          <Link className="default-link" to="/register">
             <FiLogIn size={20} color="#E02041" />
             Or register here.
           </Link>

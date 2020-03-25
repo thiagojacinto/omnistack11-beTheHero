@@ -35,4 +35,29 @@ module.exports = {
     return response.json({ id });
   },
 
+  /**
+   * DELETES INCIDENT
+   */
+  async delete(request, response) {
+    // gets the ID from the creator
+    const ngo_id = request.headers.authorization;
+    // and gets the id for the desired incident to delete:
+    const { id } = request.params;
+
+    const incident = await connection('incidents')
+      .where('id', id)  // um unico ID
+      .select('ngo_id')
+      .first();
+
+    if (incident.ngo_id !== ngo_id) {
+      // Status 401 is UNAUTHORIZED ACCES
+      return response.status(401).json({ 
+        error: 'Error: Operation not permitted; Unauthorized access.'
+      });
+    }
+
+    await connection('incidents').where('id', id).delete();
+    // Status 401 is SUCCESS but NO-CONTENT;
+    return response.status(204).send();
+  },
 }

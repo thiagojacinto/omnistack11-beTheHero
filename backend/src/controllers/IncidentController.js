@@ -8,12 +8,27 @@ module.exports = {
    * LISTS ALL INCIDENTS (within limit)
    */
   async index(request, response) {
+
+    /**
+     * SIMPLE PAGINATION IMPLEMENTATION RETURNING WITHIN RESPONSE.HEADER
+     */
+    
     // limit of the search:
-    const { limit } = request.params;
-    console.log(`Search limit: ${limit}`);
+    // default is value after `=`
+    const { page = 1 } = request.query;
+    const { limit = 5 } = request.query;
+
+    console.log(`Page number: ${page}; and it has to show ${limit} n. of incidents.`);
+
+    const [count] = connection('incidents').count();
+    response.header('X-Total-Count', count['count(*)']);
     
     // searchs everything (start) limiting results (limit(x))
-    const allIncidents = await connection('incidents').select('*').limit(limit);
+    const allIncidents = await connection('incidents')
+      .limite(limit)
+      .offset((page - 1)*limit)
+      .select('*')
+      
     // returns that json object:
     return response.json(allIncidents);
   },

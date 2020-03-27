@@ -1,6 +1,6 @@
 // imports
-const crypto = require('crypto');
 const connection = require('../database/connection');
+const generateUniqueID = require('../utils/generateUniqueID');
 
 // logic
 
@@ -10,7 +10,7 @@ module.exports = {
   
     const { name, email, phone, city, state } = request.body;
     // to create and cryptograped id:
-    const id = crypto.randomBytes(4).toString('HEX');   
+    const id = generateUniqueID();
     // stablish connection with db:
     await connection('ngos').insert({
       id,

@@ -9,7 +9,7 @@ This is also part of the Omnistack 11.0, and it got there a basic structure that
 - [Printscreens](#printscreens)
 - [Structure](#structure)
 - [Tests](#tests)
-- [Contribute](#using)
+- [Contribute](#contributing-to-omnistack11-bethehero)
 
 
 ## Using

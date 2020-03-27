@@ -7,6 +7,9 @@ const app = express();
 // permit all application to access this backend API:
 app.use(cors());
 
+// handle erros from validation
+const { errors } = require('celebrate');
+
 // imports the routes separated file:
 const routes = require('./routes');
 
@@ -30,5 +33,8 @@ app.use(express.json());
 
 // now gets the routes into the app:
 app.use(routes);
+
+// using errors handling from Celebrate
+app.use(errors());
 
 app.listen(3333);

@@ -37,4 +37,5 @@ app.use(routes);
 // using errors handling from Celebrate
 app.use(errors());
 
-app.listen(3333);
+// app.listen(3333);  // change due to renaming and using test ports;
+module.exports = app;

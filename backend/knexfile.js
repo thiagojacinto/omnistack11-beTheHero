@@ -14,6 +14,20 @@ module.exports = {
     },
     useNullAsDefault: true,
   },
+  /**
+   * TEST:
+   * with DB integration
+   */
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: './src/database/db.sqlite'
+    },
+    migrations : {
+      directory: './src/database/migrations'
+    },
+    useNullAsDefault: true,
+  },
 
   /**
    * IGNORE FROM HERE TO BOTTOM
